@@ -1,0 +1,15 @@
+.container {
+    max-width: 900px;
+    margin:0 auto;
+    padding: 50px;
+    
+}
+
+.container__header {
+	text-align: center;
+	background-color: #5980d6;
+	color: rgba(0, 0, 0, 0.623);
+	font-size: 25px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px;
+}

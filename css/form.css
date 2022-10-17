@@ -1,0 +1,33 @@
+
+.form__legend {
+	background-color: #a8a7b9;
+	border-radius: 5px;
+	padding: 5px 10px;
+	box-shadow: 8px 8px 20px;
+}
+.form__fieldset {
+	background-image: url("/img/Projekt\ bez\ tytułu\ \(12\).jpg");
+	background-position: center;
+	box-shadow: 8px 8px 20px;
+	padding: 40px;
+	border-radius: 9px;
+}
+.form__button {
+	padding: 5px 10px;
+}
+
+.form__input {
+	margin-left: 20px;
+	padding: 6px;
+}
+.form__select {
+	padding: 6px 20px;
+	margin-left: 50px;
+    
+}
+.form__footer {
+	background-color: rgba(255, 255, 255, 0.527);
+	font-size: 15px;
+	color: rgb(58, 58, 58);
+	text-align: center;
+}
