@@ -6,7 +6,7 @@
 	box-shadow: 8px 8px 20px;
 }
 .form__fieldset {
-	background-image:url("/img/Projektbeztytułu.jpg");
+	background-image:url("../img/Projektbeztytułu.jpg");
 	background-position: cover;
 	box-shadow: 8px 8px 20px;
 	padding: 40px;
