@@ -1,29 +1,54 @@
-let plnElement = document.querySelector(".js-pln");
-let currencyElement = document.querySelector(".js-currency");
-let formElement = document.querySelector(".js-form");
-let resultElement = document.querySelector(".js-result");
-let currencyNameElement = document.querySelector(".js-currencyName");
-let euroElement = document.querySelector(".js-euro");
-let usdElement = document.querySelector(".js-usd");
-let gbpElement = document.querySelector(".js-gbp");
+{
+    const calculateResult = (pln, currency) =>{
+        return pln / currency;
 
-formElement.addEventListener("input", (event) => {
-    event.preventDefault();``
- 
-    let pln = plnElement.value;
-    let currency = currencyElement.value;
+    };
 
-    let result = pln / currency;
+    const updateResultText = (result) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = result.toFixed(2);
+    };
+        
+    const onFormInput = (event) => {
+        event.preventDefault();
+    
+        const plnElement = document.querySelector(".js-pln");
+        const currencyElement = document.querySelector(".js-currency");
 
-    resultElement.innerText = result.toFixed(2) ;
+        const pln = plnElement.value;
+        const currency = currencyElement.value;
 
-    if (currencyElement.value === euroElement.value) {
-        currencyNameElement.innerText = "EUR";
-    } else if (currencyElement.value === usdElement.value) {
-        currencyNameElement.innerText = "USD";
-    } else {
-        currencyNameElement.innerText = "GBP";
-    }
+        const result = calculateResult(pln, currency);
 
-});
+        updateResultText(result);
+
+        const changeCurrencyName = () => {
+            
+            const euroElement = document.querySelector(".js-euro");
+            const usdElement = document.querySelector(".js-usd");
+            const currencyNameElement = document.querySelector(".js-currencyName");
+            
+
+               if (currencyElement.value === usdElement.value) {
+                    currencyNameElement.innerText = "USD";
+            } else if (currencyElement.value === euroElement.value) {
+                currencyNameElement.innerText = "EUR";
+            } else {
+                currencyNameElement.innerText = "GBP";
+            }
+            
+        };
+    
+        changeCurrencyName();
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("input", onFormInput);
+    };
+         init();
+}
+
+
 
